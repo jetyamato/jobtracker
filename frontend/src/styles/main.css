@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Avenir, sans-serif;
+  background-color: #f5f7fb;
+  color: #333;
+}
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+button {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #6366f1;
+  color: white;
+}
+
+button:hover {
+  background-color: #4f46e5;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.job-list {
+  list-style: none;
+  padding: 0;
+}
+
+.job-item {
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.job-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.job-actions button {
+  background-color: #e5e7eb;
+  color: #333;
+}
+
+.job-actions button:hover {
+  background-color: #d1d5db;
+}
+
+.navbar {
+  background-color: #111827;
+  padding: 12px 0;
+}
+
+.navbar-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a:active {
+  color: white;
+  text-decoration: underline;
+}
