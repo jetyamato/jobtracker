@@ -24,8 +24,8 @@ router.post("/", authMiddleware, async (req, res) => {
 
   try {
     const result = await pool.query(
-      `INSERT INTO jobs (company, position, status, applied_date, notes)
-       VALUES ($1, $2, $3, $4, $5)
+      `INSERT INTO jobs (user_id, company, position, status, applied_date, notes)
+       VALUES ($1, $2, $3, $4, $5, $6)
        RETURNING *`,
       [req.user.id, company, position, status, applied_date, notes],
     );
