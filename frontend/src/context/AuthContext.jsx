@@ -3,18 +3,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [auth, setAuth] = useState({
-    user: null,
-    token: null,
+  const [auth, setAuth] = useState(() => {
+    const stored = localStorage.getItem("auth");
+    return stored ? JSON.parse(stored) : { token: null };
   });
-
-  // restore from localStorage
-  useEffect(() => {
-    const storedAuth = localStorage.getItem("auth");
-    if (storedAuth) {
-      setAuth(JSON.parse(storedAuth));
-    }
-  }, []);
 
   function login(data) {
     setAuth(data);
@@ -23,7 +15,6 @@ export function AuthProvider({ children }) {
 
   function logout() {
     setAuth({
-      user: null,
       token: null,
     });
     localStorage.removeItem("auth");
