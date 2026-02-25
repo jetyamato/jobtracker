@@ -3,7 +3,7 @@ import JobForm from "../components/JobForm";
 import JobList from "../components/JobList";
 import { useAuth } from "../context/AuthContext";
 
-const API_URL = `${process.env.API_URL}/jobs`;
+const API_URL = `${import.meta.env.VITE_API_URL}/jobs`;
 
 export default function Jobs() {
   const { auth } = useAuth();
